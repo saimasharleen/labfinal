@@ -15,11 +15,7 @@
                   <br>
                   <span> that are worth seeing</span> </div>
               </li>
-              @foreach ($ads as $ad)
-                {{-- expr --}}
-              
-              <li><img src="images/{{$ad->image}}" alt=""></li>
-              @endforeach
+             
             </ul>
           </div>
         </div>
@@ -124,9 +120,7 @@
         <div class="newsletter_title">Notices </div>
         <div class="n_container">
           <ul class="list">
-            @foreach ($notices as $notice)
-            <li>{{$notice->postd}}</li>
-              @endforeach
+            
           </ul>
         </div>
       </div>
