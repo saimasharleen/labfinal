@@ -77,13 +77,16 @@ class adminController extends Controller
     {
         $this->validate($request, [
             'name'=>'Required',
-            'price'=>'Required'
+            'price'=>'Required',
+            'review'=>'Required'
         ]);
-        $user = new notice();
-        $user -> postd     = $request->postd;
+        $user = new pinfo();
+        $user -> name     = $request->name;
+        $user -> price     = $request->price;
+        $user -> review     = $request->review;
         $user ->save();
 
 
-        return redirect()->route('notice')->with('message','notice added successfully');;
+        return redirect()->route('pinfo')->with('message','New information added successfully');;
     }
 }
