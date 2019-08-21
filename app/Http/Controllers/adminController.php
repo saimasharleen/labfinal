@@ -71,8 +71,8 @@ class adminController extends Controller
     public function userlist()
     {  
         $userlogin = login::all();
+         //dd($userlogin);
         $user = Userinfo::where('email',session('email'))->first();
-        //dd($user);
        return view('admin.pages.userlist',compact(['userlogin','user']));
     }
     
