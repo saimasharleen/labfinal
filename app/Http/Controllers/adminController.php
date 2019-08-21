@@ -17,20 +17,20 @@ class adminController extends Controller
 
          return view('admin.index',compact('user'));
         }
-
     }
+    
     public function signup()
     {
         if(session('email') == null){
+           return redirect()->route('login');
         }
     else{
-           return redirect()->route('login');
         $user = Userinfo::where('email',session('email'))->first();
          return view('admin.pages.signup',compact('user'));
         }
          
     }
-     public function store(Request $request)
+    public function store(Request $request)
     {
         $this->validate($request, [
             'firstname'=>'Required',
@@ -40,18 +40,15 @@ class adminController extends Controller
             'password'=>'Required',
             'cpassword'=>'Required',
             'usertype'=>'Required',
-            'cname'=>'Required',
-            'licenseno'=>'Required',
-            'contactno'=>'Required',
-            'city'=>'Required',
-            'address'=>'Required',
-            'postalcode'=>'Required'
+            
         ]);
         $user = new userinfo();
         $user -> firstname     = $request->firstname;
         $user -> lastname      = $request->lastname;
         $user -> username      = $request->username;
         $user -> email         = $request->email;
+        /*$user -> password      = $request->password;
+        $user -> cpassword     = $request->cpassword;*/
         $user -> usertype      = $request->usertype;
         $user ->save();
         
@@ -63,14 +60,4 @@ class adminController extends Controller
 
         return redirect()->route('signup')->with('message','registered successfully');;
     }
-    public function userlist()
-    {  
-        $userlogin = login::all();
-         //dd($userlogin);
-        $user = Userinfo::where('email',session('email'))->first();
-       return view('admin.pages.userlist',compact(['userlogin','user']));
-    }
-    
-    
-
 }
