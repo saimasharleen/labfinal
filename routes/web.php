@@ -38,10 +38,10 @@ Route::get('/search', 'customerController@search');
 
 
 Route::get('/customer/index', 'customerController@index')->name('customer.index');
-Route::get('/admin/pages/banuser', 'adminController@banuser')->name('banuser');
+/*Route::get('/admin/pages/banuser', 'adminController@banuser')->name('banuser');
 Route::get('/admin/pages/userlist', 'adminController@userlist')->name('userlist');
 Route::get('/admin/pages/userlist/block/{id}', 'adminController@block')->name('userlist.block');
-Route::get('/admin/pages/userlist/unblock/{id}', 'adminController@unblock')->name('userlist.unblock');
+Route::get('/admin/pages/userlist/unblock/{id}', 'adminController@unblock')->name('userlist.unblock');*/
 
 
 Route::get('/logout', 'logoutController@index')->name('logout');
