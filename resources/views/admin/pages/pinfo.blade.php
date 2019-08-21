@@ -22,7 +22,7 @@
                             <label>Products Review</label>
                             <textarea name="review" rows="10" cols="40" autofocus></textarea>
                           </div>
-                          <button type="submit" class="btn btn-success mr-2">Send Notice</button>
+                          <button type="submit" class="btn btn-success mr-2">Add Product Information</button>
                         </form>
                       </div>
                     </div>
@@ -51,5 +51,5 @@
   @endsection
 
   @section('title')
-    Notice Post
+    product Information Post
   @endsection
