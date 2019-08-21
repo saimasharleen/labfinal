@@ -12,3 +12,5 @@
 */
 
 Route::get('/','homeController@index')->name('home');
+Route::get('/signin', 'loginController@index')->name('login');
+Route::post('/signin', 'loginController@verify');
