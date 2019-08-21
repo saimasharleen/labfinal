@@ -26,7 +26,7 @@ class loginController extends Controller
                 $request->session()->put('email', $email);
     			return redirect()->route('admin.index');
             }
-            elseif($user->usertype == "customer){
+            elseif($user->usertype == "customer"){
                 $request->session()->put('email', $email);
                 return redirect()->route('customer.index');
             }
