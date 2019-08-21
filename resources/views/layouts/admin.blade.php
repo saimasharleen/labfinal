@@ -143,9 +143,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/admin/pages/">
+              <a class="nav-link" href="/admin/pages/userlist">
                 <i class="menu-icon typcn typcn-bell"></i>
-                <span class="menu-title">Customerlist</span>
+                <span class="menu-title">Userlist</span>
               </a>
             </li>
             <li class="nav-item">
