@@ -25,9 +25,9 @@ class adminController extends Controller
     public function signup()
     {
        /* if(session('email') == null){
-           return redirect()->route('login');
         }
     else{
+           return redirect()->route('login');
         $user = Userinfo::where('email',session('email'))->first();
          return view('admin.pages.signup',compact('user'));
         }*/
