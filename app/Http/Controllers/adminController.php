@@ -76,5 +76,6 @@ class adminController extends Controller
        return view('admin.pages.userlist',compact(['userlogin','user']));
     }
     
+    
 
 }
