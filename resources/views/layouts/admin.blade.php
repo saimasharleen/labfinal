@@ -132,20 +132,26 @@
             <li class="nav-item">
               <a class="nav-link" href="/admin/pages/">
                 <i class="menu-icon typcn typcn-th-large-outline"></i>
-                <span class="menu-title">Advertisement Post</span>
+                <span class="menu-title">Product Post</span>
               </a>
             </li>
            
             <li class="nav-item">
               <a class="nav-link" href="/admin/pages/">
                 <i class="menu-icon typcn typcn-bell"></i>
-                <span class="menu-title">Post Notice</span>
+                <span class="menu-title">Userlist</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/admin/pages/">
-                <i class="menu-icon typcn typcn-user-outline"></i>
-                <span class="menu-title">Send Email</span>
+                <i class="menu-icon typcn typcn-bell"></i>
+                <span class="menu-title">Customerlist</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/pages/">
+                <i class="menu-icon typcn typcn-bell"></i>
+                <span class="menu-title">Productlist</span>
               </a>
             </li>
             <li class="nav-item">
