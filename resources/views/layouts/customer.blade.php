@@ -143,7 +143,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/customer/pages/">
+              <a class="nav-link" href="/customer/pages/preview">
                 <i class="menu-icon typcn typcn-bell"></i>
                 <span class="menu-title">Product Review</span>
               </a>
