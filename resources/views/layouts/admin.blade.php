@@ -130,7 +130,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/admin/pages/">
+              <a class="nav-link" href="/admin/pages/productspost">
                 <i class="menu-icon typcn typcn-th-large-outline"></i>
                 <span class="menu-title">Product Post</span>
               </a>
