@@ -46,6 +46,7 @@
                               <label class="form-check-label">
                                 <input type="radio" class="form-check-input" name="usertype" id="flatRadios3" value="customer"> Customer </label>
                           </div>
+                         
                           <button type="submit" class="btn btn-success mr-2">Submit</button>
                           <button class="btn btn-light">Cancel</button>
                         </form>
