@@ -5,6 +5,7 @@ use DB;
 use App\Userinfo;
 use App\login;
 use App\preview;
+use App\pinfo;
 use Illuminate\Http\Request;
 
 class customerController extends Controller
@@ -66,4 +67,17 @@ class customerController extends Controller
             return Response($output);
             }
         }
+    }
+    public function productlist()
+    {  
+         if(session('email') == null){
+           return redirect()->route('login');
+        }
+    else{
+        $user = Userinfo::where('email',session('email'))->first();
+        $userdata = pinfo::all();
+        //dd($user);
+       return view('customer.pages.productlist',compact(['user','userdata']));
+        }
+    }
 }
