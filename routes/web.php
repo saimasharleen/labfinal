@@ -21,5 +21,4 @@ Route::post('/admin/pages/signup','adminController@store');
 
 
 
-
 Route::get('/logout', 'logoutController@index')->name('logout');
