@@ -25,6 +25,9 @@ Route::post('/admin/pages/productspost', 'uploadfileController@store');
 Route::get('/admin/pages/pinfo', 'adminController@pinfoindex')->name('pinfo');
 Route::post('/admin/pages/pinfo', 'adminController@pinfostore');
 
+Route::get('/admin/pages/profile', 'adminController@profile');
+Route::post('/admin/pages/profile', 'adminController@updateProfile');
+
 Route::get('/admin/pages/userlist', 'adminController@userlist')->name('userlist');
 Route::get('/admin/pages/userlist/block/{id}', 'adminController@block')->name('userlist.block');
 Route::get('/admin/pages/userlist/unblock/{id}', 'adminController@unblock')->name('userlist.unblock');
