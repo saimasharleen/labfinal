@@ -18,7 +18,7 @@ Route::post('/signin', 'loginController@verify');*/
 Route::get('/admin/index', 'adminController@index')->name('admin.index');
 Route::get('/admin/pages/signup','adminController@signup')->name('signup');
 Route::post('/admin/pages/signup','adminController@store');
-
+Route::get('/admin/pages/banuser', 'adminController@banuser')->name('banuser');
 
 
 Route::get('/logout', 'logoutController@index')->name('logout');
