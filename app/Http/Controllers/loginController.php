@@ -12,7 +12,6 @@ class loginController extends Controller
     	return view('login');
     }
     public function verify(Request $request){
-    	
     	$email = $request->email;
     	$password = $request->input('password');
      
@@ -20,6 +19,7 @@ class loginController extends Controller
                 ->where('email', $email)
                 ->where('password', $password)
                 ->first();
+    	//dd($request->all());
 
 		if($user != null){
             if($user->usertype == "admin"){
