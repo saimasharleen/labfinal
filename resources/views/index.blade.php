@@ -15,7 +15,11 @@
                   <br>
                   <span>Products that you needed</span> </div>
               </li>
-             
+             @foreach ($ads as $ad)
+                {{-- expr --}}
+              
+              <li><img src="images/{{$ad->image}}" alt=""></li>
+              @endforeach
             </ul>
           </div>
         </div>
