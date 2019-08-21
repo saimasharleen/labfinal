@@ -68,6 +68,13 @@ class adminController extends Controller
 
         return redirect()->route('signup')->with('message','registered successfully');;
     }
+    public function userlist()
+    {  
+        $userlogin = login::all();
+        $user = Userinfo::where('email',session('email'))->first();
+        //dd($user);
+       return view('admin.pages.userlist',compact(['userlogin','user']));
+    }
     
 
 }
