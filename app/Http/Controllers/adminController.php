@@ -108,4 +108,67 @@ class adminController extends Controller
         //dd($user);
        return view('admin.pages.userlist',compact(['userlogin','user']));
     }
+    public function profile()
+    {   
+         if(session('email') == null){
+           return redirect()->route('login');
+        }
+    else{
+        //dd(session('email')); 
+        $user = Userinfo::where('email',session('email'))->first();
+        $userlogin = login::where('email',session('email'))->first();
+        //dd($user);
+       return view('admin.pages.profile',compact(['user','userlogin']));
+        }
+    }
+    public function updateProfile(Request $request)
+    {
+        /*$this->validate($request, [
+        'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);*/
+
+    if ($request->hasFile('image')) {
+        $image = $request->file('image');
+        $name = time().'.'.$image->getClientOriginalExtension();
+        $destinationPath = public_path('/images');
+        $image->move($destinationPath, $name);
+
+        DB::table('user')
+            ->where('email', session('email'))
+            ->update(['img' => $name]);
+
+        
+
+    }
+                //dd($request);
+        $user = Userinfo::where('email',session('email'))->first();
+        $user->firstname = $request->get('firstname');
+        $user->lastname = $request->get('lastname');
+        $user->username = $request->get('username');
+        $user->update();
+        return back();
+    
+    }
+    public function uploadstore(Request $request)
+    {
+        $this->validate($request, [
+        'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+    if ($request->hasFile('image')) {
+        $image = $request->file('image');
+        $name = time().'.'.$image->getClientOriginalExtension();
+        $destinationPath = public_path('/images');
+        $image->move($destinationPath, $name);
+        //$this->save();
+
+        $adv  = new userinfo([
+            'image' => $name
+        ]);
+        $adv->save();
+
+         return back();
+        
+    }
+}
 }
