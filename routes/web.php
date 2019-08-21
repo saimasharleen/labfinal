@@ -28,6 +28,9 @@ Route::post('/admin/pages/pinfo', 'adminController@pinfostore');
 Route::get('/customer/pages/preview', 'customerController@previewindex')->name('preview');
 Route::post('/customer/pages/preview', 'customerController@previewstore');
 
+Route::get('/customer/pages/productlist', 'customerController@productlist')->name('productlist');
+Route::get('/search', 'customerController@search');
+
 
 
 Route::get('/customer/index', 'customerController@index')->name('customer.index');
