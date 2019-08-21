@@ -11,9 +11,9 @@
             <ul class="items">
               <li><img src="images/slide.jpg" alt="">
                 <div class="banner">
-                  <div>THERE ARE PLENTY OF PLACES</div>
+                  <div>Online Computer Shop</div>
                   <br>
-                  <span> that are worth seeing</span> </div>
+                  <span>Products that you needed</span> </div>
               </li>
              
             </ul>
@@ -25,34 +25,10 @@
   <div class="content">
     <div class="container_12">
       <div class="grid_12">
-        <h3>Top Destinations</h3>
+        
       </div>
-      <div class="boxes">
-        <div class="grid_4">
-          <figure>
-            <div><img src="images/slide.jpg" alt=""></div>
-            <figcaption>
-              <h3>Venice</h3>
-              Lorem ipsum dolor site geril amet, consectetur cing eliti. Suspendisse nulla leo mew dignissim eu velite a rew qw vehicula lacinia arcufasec ro. Aenean lacinia ucibusy fase tortor ut feugiat. Rabi tur oliti aliquam bibendum olor quis malesuadivamu. <a href="#" class="btn">Details</a> </figcaption>
-          </figure>
-        </div>
-        <div class="grid_4">
-          <figure>
-            <div><img src="images/page1_img2.jpg" alt=""></div>
-            <figcaption>
-              <h3>New York</h3>
-              Psum dolor sit ametylo gerto consectetur ertori hykill holit adipiscing lity. Donecto rtopil osueremo	kollit asec emmodem geteq tiloli. Aliquam dapibus neclol nami wertoli elittro eget vulpoli no
-              utaterbil congue turpis in su. <a href="#" class="btn">Details</a> </figcaption>
-          </figure>
-        </div>
-        <div class="grid_4">
-          <figure>
-            <div><img src="images/page1_img3.jpg" alt=""></div>
-            <figcaption>
-              <h3>Paris</h3>
-              Lorem ipsum dolor site geril amet, consectetur cing eliti. Suspendisse nulla leo mew dignissim eu velite a rew qw vehicula lacinia arcufasec ro. Aenean lacinia ucibusy fase tortor ut feugiat. Rabi tur oliti aliquam bibendum olor quis malesuadivamu. <a href="#" class="btn">Details</a> </figcaption>
-          </figure>
-        </div>
+          
+       
         <div class="clear"></div>
       </div>
       <div class="grid_8">
