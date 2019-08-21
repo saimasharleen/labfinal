@@ -1,4 +1,4 @@
-@extends('layouts.superadmin')
+@extends('layouts.admin')
 @section('content')
         <!-- partial -->
         <div class="main-panel">
@@ -10,5 +10,5 @@
   
 
   @section('title')
-    SuperAdmin Homepage
+    Admin Homepage
   @endsection
