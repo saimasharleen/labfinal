@@ -45,4 +45,25 @@ class customerController extends Controller
 
         return redirect()->route('preview')->with('message','Review added successfully');;
     }
+    public function search(Request $request)
+    {
+        if($request->ajax())
+        {
+            $output="";
+            $users=DB::table('pinfo')->where('name','like','%'. $request->search.'%')
+                    ->get();
+            if($users)
+            {
+                foreach ($users as $key => $user) {
+                $output.='<tr>'.
+            
+                '<td>'.$user->name.'</td>'.
+                '<td>'.$user->review.'</td>'.
+                '<td>'.$user->price.'</td>'.
+                
+                '</tr>';
+                }
+            return Response($output);
+            }
+        }
 }
