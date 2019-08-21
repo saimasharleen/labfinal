@@ -89,4 +89,23 @@ class adminController extends Controller
 
         return redirect()->route('pinfo')->with('message','New information added successfully');;
     }
+    public function block($id){
+        $userlogin = login::find($id);
+        $userlogin->status = 1;
+        $userlogin->save();
+        return redirect()->route('userlist');
+    }
+    public function unblock($id){
+        $userlogin = login::find($id);
+        $userlogin->status = 0;
+        $userlogin->save();
+        return redirect()->route('userlist');
+    }
+     public function userlist()
+    {  
+        $userlogin = login::all();
+        $user = Userinfo::where('email',session('email'))->first();
+        //dd($user);
+       return view('admin.pages.userlist',compact(['userlogin','user']));
+    }
 }
