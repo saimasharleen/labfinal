@@ -35,5 +35,39 @@ class adminController extends Controller
          return view('admin.pages.signup',compact('user'));*/
          return view('admin.pages.signup');
     }
+     public function store(Request $request)
+    {
+        $this->validate($request, [
+            'firstname'=>'Required',
+            'lastname'=>'Required',
+            'username'=>'Required',
+            /*'email'=>'Required',*/
+            'password'=>'Required',
+            'cpassword'=>'Required',
+            'usertype'=>'Required',
+            'cname'=>'Required',
+            'licenseno'=>'Required',
+            'contactno'=>'Required',
+            'city'=>'Required',
+            'address'=>'Required',
+            'postalcode'=>'Required'
+        ]);
+        $user = new userinfo();
+        $user -> firstname     = $request->firstname;
+        $user -> lastname      = $request->lastname;
+        $user -> username      = $request->username;
+        $user -> email         = $request->email;
+        $user -> usertype      = $request->usertype;
+        $user ->save();
+        
+        $userlogin = new login();
+        $userlogin -> email         = $request->email;
+        $userlogin -> password      = $request->password; 
+        $userlogin -> usertype      = $request->usertype;         
+        $userlogin ->save();
+
+        return redirect()->route('signup')->with('message','registered successfully');;
+    }
+    
 
 }
